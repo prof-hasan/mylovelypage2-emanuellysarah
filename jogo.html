@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Glow Up ✨</title>
+    <link rel="icon" href="imgs/logotipo1.png">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="main-card">
+
+        <header>
+            <h1>Glow Up</h1>
+            <p id="subtitulo1">Descubra truques, inspirações e tendências para brilhar</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="jogo.html" class="active">Jogo</a></li>
+            </ul>
+        </nav>
+
+        <div id="game-container">
+
+
+            <div id="model-card" class="card">
+                <h2>💄 Seu rosto</h2>
+                <img id="rosto" src="imgs-jogo/rostofem.jpg" alt="Modelo">
+            </div>
+
+            <div id="produtos-card" class="card produtos-card">
+                <h2 id="etapa-texto">Escolha a sombra:</h2>
+
+                <div class="etapa" id="sombra-etapa">
+                    <div class="opcao">
+                        <img src="imgs-jogo/rosto-sombra-azul.png" alt="Sombra Azul" class="mini">
+                        <button class="produto" data-tipo="sombra" data-valor="s-azul">Sombra Azul</button>
+                    </div>
+                    <div class="opcao">
+                        <img src="imgs-jogo/rosto-sombra-rosa.png" alt="Sombra Rosa" class="mini">
+                        <button class="produto" data-tipo="sombra" data-valor="s-rosa">Sombra Rosa</button>
+                    </div>
+                </div>
+
+                <div class="etapa" id="blush-etapa">
+                    <div class="opcao">
+                        <img src="imgs-jogo/rosto-blush-rosa.png" alt="Blush Rosa" class="mini">
+                        <button class="produto" data-tipo="blush" data-valor="bl-rosa">Blush Rosa</button>
+                    </div>
+                    <div class="opcao">
+                        <img src="imgs-jogo/rosto-blush-vermelho.png" alt="Blush Vermelho" class="mini">
+                        <button class="produto" data-tipo="blush" data-valor="bl-vermelho">Blush Vermelho</button>
+                    </div>
+                </div>
+
+                <div class="etapa" id="batom-etapa">
+                    <div class="opcao">
+                        <img src="imgs-jogo/b-roxo.png" alt="Batom Roxo" class="mini">
+                        <button class="produto" data-tipo="batom" data-valor="bt-roxo">Batom Roxo</button>
+                    </div>
+                    <div class="opcao">
+                        <img src="imgs-jogo/b-vermelho.png" alt="Batom Vermelho" class="mini">
+                        <button class="produto" data-tipo="batom" data-valor="bt-vermelho">Batom Vermelho</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="reiniciar" title="Reiniciar">🔄</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="card">
+            <h2>🎉 Parabéns!</h2>
+            <p>💄 Você ganhou uma maquiagem!</p>
+            <a class="btn" id="closeBtn">Fechar</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
