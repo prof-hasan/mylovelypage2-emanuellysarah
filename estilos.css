@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bungee&family=Dancing+Script:wght@400..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Story+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 20px 5%;
+    background-image: url("imgs/fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.main-card {
+    background: rgba(255, 255, 255, 0.63);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.intro {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #8b004f;
+}
+
+h1 {
+    color: rgb(226, 43, 180);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 3px 4px rgba(255, 249, 255, 0.836);
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: 'Bungee', cursive;
+}
+
+h3, h4 {
+    font-family: 'Dancing Script', cursive;
+}
+
+h4 {
+    text-align: justify;
+    font-size: 15px;
+}
+
+p {
+    font-family: 'Story Script', cursive;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#subtitulo1 {
+    color: rgb(17, 16, 37);
+    font-size: 23px;
+}
+
+header {
+    color: rgb(233, 124, 191);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+nav {
+    background: rgba(255, 192, 203, 0.5);
+    padding: 1rem;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+nav li {
+    flex: 1 1 0%;
+    text-align: center;
+}
+
+nav a {
+    font-size: clamp(1.5em, 1.7vw, 3em);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 0 15px;
+    color: #d63384;
+}
+
+nav a:hover {
+    color: deeppink;
+}
+
+nav a.active {
+    border-bottom: 2px solid deeppink;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffc0cb;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: block;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.card:hover p {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.video-card {
+    background: pink;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: left;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.video-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#notaautora {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ff69b4;
+    background: rgba(255, 192, 203, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ff69b4;
+    margin: 30px 0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tipos-pele {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.tipos-pele .thumb {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.tipos-pele .thumb:hover {
+    transform: scale(1.1);
+}
+
+.tipos-pele .thumb:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.tipos-pele .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.tipos-pele .thumb .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: rgba(250, 250, 250, 0.685);
+    text-align: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.tipos-pele .thumb .overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #111;
+    line-height: 1.2;
+}
+
+.tabela-responsiva {
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+.tabela-maquiagem {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tabela-maquiagem thead tr {
+    background-color: #ffb6c1;
+    color: #8b004f;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabela-maquiagem th,
+.tabela-maquiagem td {
+    padding: 12px;
+    border: 1px solid #ffb6c1;
+    vertical-align: top;
+}
+
+.tabela-maquiagem tbody tr:nth-child(even) {
+    background-color: #ffe4e1;
+}
+
+.tabela-maquiagem tbody tr:hover {
+    background-color: #ffc0cb;
+}
+
+.tabela-maquiagem th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.tabela-maquiagem th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.tabela-maquiagem td:first-child {
+    font-weight: bold;
+}
+
+
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#model-card {
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+#rosto {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+}
+
+.produtos-card {
+    max-width: 280px;
+    background-color: #ffe4f0;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+
+.produtos-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* easter egg */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card {
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+}
+.card h2 {
+  margin: 0 0 10px;
+}
+.btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 8px 16px;
+  background: #ec4899;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 14px;
+  background: red;
+  top: -20px;
+  opacity: 0.9;
+  border-radius: 3px;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
+
+.etapa {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.etapa.ativa {
+    display: flex;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcao img.mini {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.produto {
+    padding: 8px 12px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.produto:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+#reiniciar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff69b4;
+    background-color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+    transition: all 0.3s;
+}
+
+#reiniciar:hover {
+    background-color: #ff69b4;
+    color: white;
+    transform: scale(1.1);
+}
+
+#maquiagens {
+    background-color: #ffeefbec;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#maquiagens h3 {
+    color: #ff1493;
+    margin-top: 15px;
+}
+
+#maquiagens ul {
+    padding: 20px;
+}
+
+.voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff69b4;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, opacity 0.3s;
+    opacity: 0.7;
+    z-index: 1000;
+    display: none;
+}
+
+.voltar-topo:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-card {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+
+    #subtitulo1 {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: none;
+    }
+
+    #game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .produtos-card {
+        max-width: 100%;
+    }
+
+    .tabela-maquiagem th,
+    .tabela-maquiagem td {
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .tipos-pele .thumb {
+        width: 150px;
+        height: 150px;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 40px;
+    }
+}
